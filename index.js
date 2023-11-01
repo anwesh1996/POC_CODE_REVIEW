@@ -9,13 +9,3 @@ function badSumElements(arr) {
     }
     return total;
   }
-
-function dateEquals(dateOne, dateTwo) {
-    return (
-      dateOne.getFullYear() === dateTwo.getFullYear() &&
-      dateOne.getMonth() === dateTwo.getMonth() &&
-      dateOne.getDate() === dateTwo.getDate()
-    );
-}
-  
-module.exports.dateEquals = dateEquals;
