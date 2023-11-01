@@ -2,6 +2,15 @@ on:
   pull_request:
   issue_comment:
 jobs:
+  checkout_branch:
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+        with:
+          repository: anwesh1996/codium_private
+          ref: v1.0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: ./.github/workflows
   pr_agent_job:
     runs-on: ubuntu-latest
     permissions:
@@ -12,7 +21,7 @@ jobs:
     steps:
       - name: PR Agent action step
         id: pragent
-        uses: anwesh1996/codium_private@main
+        uses: /.github/workflows/pr_agent
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
