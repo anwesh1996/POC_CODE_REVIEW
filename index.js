@@ -1,5 +1,6 @@
 /**
  * find sum of elements
+ * 
  */
 
 function badSumElements(arr) {
