@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: PR Agent action step
         id: pragent
-        uses: codium_private@main
+        uses: anwesh1996/codium_private@main
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
